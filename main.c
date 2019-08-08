@@ -51,8 +51,5 @@ int main() {
     getPaths(G2);
     printMatrix(G2); printf("\n");
 
-
-
-
     return 0;
 }

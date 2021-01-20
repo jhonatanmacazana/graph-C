@@ -1,0 +1,16 @@
+[
+  {
+    "key": "Win+f9",
+    "command": "workbench.action.tasks.runTask",
+    "args": "make"
+  },
+  {
+    "key": "f9",
+    "command": "workbench.action.tasks.runTask",
+    "args": "make run"
+  },
+  {
+    "key": "f8",
+    "command": "workbench.action.tasks.runTask"
+  }
+]

@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/graph_C.dir/main.c.o CMakeFiles/graph_C.dir/graph.c.o  -o graph_C 

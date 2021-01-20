@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Simulate",
+      "type": "cppdbg",
+      "request": "launch",
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "preLaunchTask": "Build",
+      "linux": {
+        // "program": "${workspaceFolder}/build/lin/main.out",
+        "program": "${workspaceFolder}/main.out",
+        "setupCommands": [
+          {
+            "description": "Habilitar la impresión con sangría para gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ]
+      },
+      "osx": {
+        "program": "${workspaceFolder}/build/osx/main.out",
+        "MIMode": "lldb" // lldb | gdb
+      },
+      "windows": {
+        "program": "${workspaceFolder}\\build\\win\\main.exe",
+        "miDebuggerPath": "gdb.exe"
+      }
+    }
+  ]
+}

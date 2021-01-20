@@ -3,8 +3,7 @@
 #include "graph.h"
 
 int main() {
-    printf("Hello, World!\n");
-/*
+    /*
     Graph* G1 = createGraph();
     insertNode(G1, 0, 0, 0);
     insertNode(G1, 1, 0, 0);
@@ -27,14 +26,12 @@ int main() {
     printf("\n");
 */
 
-    /*********************************************/
-    Graph *G2 = createGraph();
+    Graph* G2 = createGraph();
     insertNode(G2, 0, 0, 0);
     insertNode(G2, 1, 0, 0);
     insertNode(G2, 2, 0, 0);
     insertNode(G2, 3, 0, 0);
     insertNode(G2, 4, 0, 0);
-
 
     createMatrix(G2);
 
@@ -47,9 +44,11 @@ int main() {
     insertEdge(G2, 4, 1, 4);
     insertEdge(G2, 4, 3, 2);
 
-    printMatrix(G2); printf("\n");
+    printMatrix(G2);
+    printf("\n");
     getPaths(G2);
-    printMatrix(G2); printf("\n");
+    printMatrix(G2);
+    printf("\n");
 
     return 0;
 }

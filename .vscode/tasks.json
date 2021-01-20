@@ -1,0 +1,76 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "shell": {
+      "executable": "/bin/zsh",
+      "args": ["-c"]
+    },
+    "env": {},
+    "cwd": "${workspaceFolder}"
+  },
+  "presentation": {
+    "clear": true,
+    "echo": false,
+    "reveal": "always",
+    "revealProblems": "onProblem",
+    "focus": true,
+    "panel": "shared",
+    "showReuseMessage": true
+  },
+  "problemMatcher": ["$gcc"],
+  "tasks": [
+    {
+      "label": "make",
+      "type": "shell",
+      "command": "make -j4",
+      "group": "build",
+      "presentation": {
+        "reveal": "silent",
+        "focus": false,
+        "showReuseMessage": true
+      }
+    },
+    {
+      "label": "make run",
+      "type": "shell",
+      "command": "make -j4 run",
+      "group": "build",
+      "dependsOn": ["make"]
+    },
+    {
+      "label": "make clean",
+      "type": "shell",
+      "command": "make -j4 clean",
+      "group": "none",
+      "presentation": {
+        "reveal": "silent",
+        "focus": false,
+        "showReuseMessage": false
+      }
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "g++",
+      "presentation": {
+        "reveal": "silent",
+        "focus": false,
+        "showReuseMessage": false
+      },
+      "linux": {
+        "command": "g++",
+        "args": [
+          "--std=c++11",
+          "-g",
+          "${workspaceFolder}/src/sequential/main.cpp",
+          "-o",
+          "${workspaceFolder}/main.out"
+        ]
+      },
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      }
+    }
+  ]
+}

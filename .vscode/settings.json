@@ -1,0 +1,21 @@
+{
+  "files.associations": {
+    "*.h": "c",
+    "*.c": "c",
+    "*.hpp": "cpp",
+    "*.cpp": "cpp"
+  },
+  "files.exclude": {
+    "**/.envrc": true,
+    "**/.DS_Store": true,
+    "**/out": true,
+    "**/build": true
+  },
+  "code-runner.cwd": "$workspaceRoot",
+  "code-runner.executorMap": {
+    "c": "make -j4 run",
+    "cpp": "make -j4 run"
+  },
+  "C_Cpp.autoAddFileAssociations": false,
+  "C_Cpp.intelliSenseEngine": "Default"
+}
